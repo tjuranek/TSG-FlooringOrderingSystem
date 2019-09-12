@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29201.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FOS.UI", "FOS.UI\FOS.UI.csproj", "{14708558-BB29-4B86-A035-3692F952DB55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14708558-BB29-4B86-A035-3692F952DB55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14708558-BB29-4B86-A035-3692F952DB55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14708558-BB29-4B86-A035-3692F952DB55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14708558-BB29-4B86-A035-3692F952DB55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A086ED9C-2FC8-4C8D-8116-8D7662308254}
+	EndGlobalSection
+EndGlobal
