@@ -17,5 +17,28 @@ namespace FOS.Models
         public decimal LaborCost { get; set; }
         public decimal Tax { get; set; }
         public decimal Total { get; set; }
+
+        public Order()
+        {
+
+        }
+
+        public Order(int orderNumber, string customerName, string state, decimal taxRate,
+                string productType, decimal area, decimal costPerSquareFoot, decimal laborCostPerSquareFoot,
+                decimal materialCost, decimal laborCost, decimal tax, decimal total)
+        {
+            OrderNumber = orderNumber;
+            CustomerName = customerName;
+            State = state;
+            TaxRate = taxRate;
+            ProductType = productType;
+            Area = area;
+            CostPerSquareFoot = costPerSquareFoot;
+            LaborCostPerSquareFoot = LaborCostPerSquareFoot;
+            MaterialCost = materialCost;
+            LaborCost = laborCost;
+            Tax = tax;
+            Total = total;
+        }
     }
 }
