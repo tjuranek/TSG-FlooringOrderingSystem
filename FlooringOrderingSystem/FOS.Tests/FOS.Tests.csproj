@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DevelopmentRepositoryTests.cs" />
+    <Compile Include="OrderManagerTests.cs" />
     <Compile Include="ProductionRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -56,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FOS.BLL\FOS.BLL.csproj">
+      <Project>{b290e95f-a707-4494-b519-c66c7c065794}</Project>
+      <Name>FOS.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FOS.Data\FOS.Data.csproj">
       <Project>{5f3b7de4-e635-4ff2-a985-a939484c742c}</Project>
       <Name>FOS.Data</Name>

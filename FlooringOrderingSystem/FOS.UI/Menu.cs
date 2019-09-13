@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using FOS.UI.Workflows;
 
 namespace FOS.UI
 {
@@ -30,20 +27,20 @@ namespace FOS.UI
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        //DisplayOrdersWorkflow displayOrders = new DisplayOrdersWorkflow();
-                        //displayOrders.Execute();
+                        DisplayOrdersWorkflow displayOrders = new DisplayOrdersWorkflow();
+                        displayOrders.Execute();
                         break;
                     case "2":
-                        //AddOrderWorkflow addOrder = new AddOrderWorkflow();
-                        //addOrder.Execute();
+                        AddOrderWorkflow addOrder = new AddOrderWorkflow();
+                        addOrder.Execute();
                         break;
                     case "3":
-                        //EditOrderWorkflow editOrder = new EditOrderWorkflow();
-                        //editOrder.Execute();
+                        EditOrderWorkflow editOrder = new EditOrderWorkflow();
+                        editOrder.Execute();
                         break;
                     case "4":
-                        //RemoveOrderWorkflow removeOrder = new RemoveOrderWorkflow();
-                        //removeOrder.Execute();
+                        RemoveOrderWorkflow removeOrder = new RemoveOrderWorkflow();
+                        removeOrder.Execute();
                         break;
                     case "Q":
                         return;

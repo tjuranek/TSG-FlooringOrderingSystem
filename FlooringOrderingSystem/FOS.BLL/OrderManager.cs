@@ -12,11 +12,17 @@ namespace FOS.BLL
         private IProductRepository _products;
         private ITaxRepository _taxes;
 
+        public List<Product> Products = new List<Product>();
+        public List<Tax> Taxes = new List<Tax>();
+
         public OrderManager(IOrderRepository orders, IProductRepository products, ITaxRepository taxes)
         {
             _orders = orders;
             _products = products;
             _taxes = taxes;
+
+            Products = _products.RetrieveProducts();
+            Taxes = _taxes.RetrieveTaxes();
         }
 
         #region CRUD methods
@@ -122,7 +128,7 @@ namespace FOS.BLL
                     order.CostPerSquareFoot = product.CostPerSquareFoot;
                     order.LaborCostPerSquareFoot = product.LaborCostPerSquareFoot;
                 }
-            }
+            } 
 
             foreach (Tax tax in _taxes.RetrieveTaxes())
             {

@@ -14,9 +14,9 @@ namespace FOS.BLL
             switch (mode)
             {
                 case "Dev":
-                    return new OrderManager(new DevelopmentOrdersRepository(), new DevelopmentProductsRepository(), new DevelopmentTaxesRepository();
+                    return new OrderManager(new DevelopmentOrdersRepository(), new DevelopmentProductsRepository(), new DevelopmentTaxesRepository());
                 case "Prod":
-                    return new OrderManager(new ProductionOrdersRepository(@"C:\Data\LiveData"), new ProductionProductsRepository(@"C:\Data\LiveData"), new ProductionTaxesRepository(@"C:\Data\LiveData"));
+                    return new OrderManager(new ProductionOrdersRepository(@"C:\Data\LiveData"), new ProductionProductsRepository(@"C:\Data\LiveData\Products.txt"), new ProductionTaxesRepository(@"C:\Data\LiveData\Taxes.txt"));
                 default:
                     throw new Exception("Mode value in app config is not valid");
             }

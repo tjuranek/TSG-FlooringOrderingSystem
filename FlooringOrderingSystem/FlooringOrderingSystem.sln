@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FOS.Data", "FOS.Data\FOS.Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FOS.Tests", "FOS.Tests\FOS.Tests.csproj", "{2578CD40-4E88-445E-BFA9-E0DC7483EDB5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FOS.BLL", "FOS.BLL\FOS.BLL.csproj", "{B290E95F-A707-4494-B519-C66C7C065794}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2578CD40-4E88-445E-BFA9-E0DC7483EDB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2578CD40-4E88-445E-BFA9-E0DC7483EDB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2578CD40-4E88-445E-BFA9-E0DC7483EDB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B290E95F-A707-4494-B519-C66C7C065794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B290E95F-A707-4494-B519-C66C7C065794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B290E95F-A707-4494-B519-C66C7C065794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B290E95F-A707-4494-B519-C66C7C065794}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
