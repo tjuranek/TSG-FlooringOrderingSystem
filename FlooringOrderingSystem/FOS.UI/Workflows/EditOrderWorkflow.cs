@@ -25,6 +25,11 @@ namespace FOS.UI.Workflows
                 OrderNumber = orderNumber
             }).Order;
 
+            var name = order.CustomerName;
+            var state = order.State;
+            var productType = order.ProductType;
+            var area = order.Area;
+
             if (order != null)
             {
                 order.CustomerName = Input.GetCustomerNameInput(order.CustomerName);
@@ -33,7 +38,8 @@ namespace FOS.UI.Workflows
                 order.Area = Input.GetAreaInput(order.Area);
             }
 
-            order = manager.GenerateOrder(orderDate, order.CustomerName, order.State, order.ProductType, order.Area);
+            if (state != order.State || productType != order.ProductType || area != order.Area)
+                order = manager.GenerateOrder(orderDate, order.CustomerName, order.State, order.ProductType, order.Area);
 
             Output.DisplayOrder(order);
 

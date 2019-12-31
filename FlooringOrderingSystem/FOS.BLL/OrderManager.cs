@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using FOS.Models;
 using FOS.Models.Responses;
 using FOS.Models.Interfaces;
@@ -30,8 +31,31 @@ namespace FOS.BLL
         {
             Response response = new Response();
 
-            if (_orders.CreateOrder(order))
-                response.Success = true;
+            bool isValid = true;
+
+            if (order.OrderDate < DateTime.Now)
+                isValid = false;
+
+            string validChars = "abcdefghijklmnopqrstuvwxyz123456789,. ";
+            if (order.CustomerName.Any(x => !validChars.Contains(x.ToString().ToLower())))
+                isValid = false;
+
+            if (!Taxes.Any(t => t.StateAbbreviation.ToLower() == order.State.ToLower()))
+                isValid = false;
+
+            if (!Products.Any(p => p.ProductType.ToLower() == order.ProductType.ToLower()))
+                isValid = false;
+
+            if (isValid)
+            {
+                if (_orders.CreateOrder(order))
+                    response.Success = true;
+                else
+                {
+                    response.Success = false;
+                    response.Message = "Error: Unable to create order.";
+                }
+            }
             else
             {
                 response.Success = false;

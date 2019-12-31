@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using FOS.Models;
 using FOS.Models.Interfaces;
@@ -39,7 +40,9 @@ namespace FOS.Data.Development
 
         public Order RetrieveOrder(Order order)
         {
-            return _orders.FirstOrDefault(o => o.OrderNumber == order.OrderNumber);
+            List<Order> orders = RetrieveOrdersByDate(order.OrderDate);
+
+            return orders.FirstOrDefault(o => o.OrderNumber == order.OrderNumber);
         }
 
         public List<Order> RetrieveOrdersByDate(DateTime date)

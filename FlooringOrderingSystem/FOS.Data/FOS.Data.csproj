@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\DatabaseOrdersRepository.cs" />
+    <Compile Include="Database\DatabaseProductsRepository.cs" />
+    <Compile Include="Database\DatabaseTaxesRepository.cs" />
     <Compile Include="Development\DevelopmentOrdersRepository.cs" />
     <Compile Include="Development\DevelopmentProductsRepository.cs" />
     <Compile Include="Development\DevelopmentTaxesRepository.cs" />
